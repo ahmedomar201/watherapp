@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/services/weather.services.dart';
+import 'package:weather_app/model/weather.model.dart';
+import 'package:weather_app/services/weather_service.dart';
 
 class SearchPage extends StatelessWidget {
-
   String? cityName;
 
-
+  WeatherModel? weatherModel;
 
   var searchController = TextEditingController();
   @override
@@ -19,10 +19,15 @@ class SearchPage extends StatelessWidget {
         child: TextFormField(
           controller: searchController,
           keyboardType: TextInputType.text,
-          onFieldSubmitted: (data) {
-            cityName=data;
-            weatherService service=weatherService();
-            service.getWeather(cityName:cityName!);
+          onFieldSubmitted: (data) async {
+            cityName = data;
+            WeatherService service = WeatherService();
+
+            WeatherModel weather =
+                await service.getWeather(cityName: cityName!);
+            weatherModel = weather;
+
+            Navigator.pop(context);
           },
           decoration: InputDecoration(
             labelText: "Search",

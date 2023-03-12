@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: weatherModel != null
+      body: weatherModel == null
           ? Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
