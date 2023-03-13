@@ -9,7 +9,8 @@ class Location {
   String? localtime;
 
   Location(
-      {this.name,
+      {
+        this.name,
         this.region,
         this.country,
         this.lat,

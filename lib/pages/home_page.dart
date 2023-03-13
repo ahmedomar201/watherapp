@@ -42,8 +42,7 @@ class HomePage extends StatelessWidget {
               ),
             )
           : Container(
-        color: Colors.orange,
-
+              color: Colors.orange,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -67,7 +66,6 @@ class HomePage extends StatelessWidget {
                         "https://media.istockphoto.com/id/1124567572/vector/cute-flat-sun-icon.jpg?s=1024x1024&w=is&k=20&c=JYtBT8k9RG84vTDYGAJnuwAGfz-XEwtlHOwCQqNs6jE=",
                         height: 80,
                         width: 80,
-
                       ),
                       SizedBox(
                         width: 10,
